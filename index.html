@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Image Tracking</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.0.0/aframe/build/aframe-ar.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+<a-scene embedded arjs>
+    <a-marker id="marker" preset="hiro" smooth="true" ui-logic tracked-ui="element: #UI; offset: 0 200">
+        <a-entity id="container" position="0 0 0">
+            <a-entity id="model" gltf-model="url(model/shiba/scene.gltf)" scale="1 1 1"></a-entity>
+        </a-entity>
+    </a-marker>
+      <a-entity camera></a-entity>
+</a-scene>
+<button id="rotateButton">Dừng xoay</button>
+<script src="script.js"></script>
+</body>
+</html>
